@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单相加器</title>
+    <script>
+        function addNumbers() {
+            var a = parseFloat(document.getElementById('inputA').value);
+            var b = parseFloat(document.getElementById('inputB').value);
+            if (isNaN(a) || isNaN(b)) {
+                alert("请输入有效的数字！");
+                return;
+            }
+            var sum = a + b;
+            document.getElementById('result').textContent = '结果: ' + sum;
+        }
+    </script>
+</head>
+<body>
+    <h1>简单相加器</h1>
+    <p>输入两个数字:</p>
+    <input id="inputA" type="number">
+    <input id="inputB" type="number">
+    <button onclick="addNumbers()">相加</button>
+    <p id="result"></p>
+</body>
+</html>
